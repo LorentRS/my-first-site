@@ -7,9 +7,11 @@
             <h1><a href="/">Berke Blog</a></h1>
         </div>
             {% for post in posts %}
-                <p>published_date : {{post.published_date}}</p>
-                <a href = ""><h3>{{post.title}}</h3></a>
-                <p>Text : {{post.text}}</p>
+                <div>
+                    <p>published_date : {{post.published_date}}</p>
+                    <a href = ""><h3>{{post.title}}</h3></a>
+                    <p>Text : {{post.text}}</p>
+                </div>
             {% endfor %}
     </body>
 </html>
