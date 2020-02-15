@@ -1,7 +1,7 @@
 {% extends 'pages/base.html' %}
 {% block content %}
     {% for post in posts %}
-        <div>
+        <div class = mt-5>
             <p>published_date : {{post.published_date}}</p>
             <a href = ""><h3>{{post.title}}</h3></a>
             <p>Text : {{post.text}}</p>
