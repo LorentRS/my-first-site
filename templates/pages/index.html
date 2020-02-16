@@ -1,9 +1,9 @@
 {% extends 'pages/base.html' %}
 {% block content %}
     {% for post in posts %}
-        <div class = mt-5>
+        <div class = "mt-5">
             <p>published_date : {{post.published_date}}</p>
-            <a href = ""><h3>{{post.title}}</h3></a>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>Text : {{post.text}}</p>
         </div>
     {% endfor %}
