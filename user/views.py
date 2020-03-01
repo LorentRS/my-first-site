@@ -54,4 +54,7 @@ def logout(request):
     if request.method == "POST":
         auth.logout(request)
         messages.add_message(request,messages.SUCCESS,"Çıkış Yapıldı")
+        print("djafmsdkf")
         return redirect('index')
+    else:
+        return render(request,"user/logout.html")
