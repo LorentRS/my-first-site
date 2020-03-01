@@ -51,4 +51,8 @@ def register(request):
 
 
 def logout(request):
+    if request.method == "POST":
+        auth.logout(request)
+        messages.add_message(request,messages.SUCCESS,"Çıkış Yapıldı")
+        return redirect('index')
     return render(request,'user/logout.html')
