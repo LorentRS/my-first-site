@@ -55,4 +55,3 @@ def logout(request):
         auth.logout(request)
         messages.add_message(request,messages.SUCCESS,"Çıkış Yapıldı")
         return redirect('index')
-    return render(request,'user/logout.html')
